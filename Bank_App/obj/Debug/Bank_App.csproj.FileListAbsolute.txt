@@ -1,0 +1,16 @@
+C:\Users\davom\source\repos\Bank_App\Bank_App\bin\Debug\Bank_App.exe.config
+C:\Users\davom\source\repos\Bank_App\Bank_App\bin\Debug\Bank_App.exe
+C:\Users\davom\source\repos\Bank_App\Bank_App\bin\Debug\Bank_App.pdb
+C:\Users\davom\source\repos\Bank_App\Bank_App\obj\Debug\Bank_App.General.resources
+C:\Users\davom\source\repos\Bank_App\Bank_App\obj\Debug\Bank_App.Properties.Resources.resources
+C:\Users\davom\source\repos\Bank_App\Bank_App\obj\Debug\Bank_App.csproj.GenerateResource.cache
+C:\Users\davom\source\repos\Bank_App\Bank_App\obj\Debug\Bank_App.csproj.CoreCompileInputs.cache
+C:\Users\davom\source\repos\Bank_App\Bank_App\obj\Debug\Bank_App.exe
+C:\Users\davom\source\repos\Bank_App\Bank_App\obj\Debug\Bank_App.pdb
+C:\Users\davom\source\repos\Bank_App\Bank_App\obj\Debug\Bank_App.LogRegister.resources
+C:\Users\davom\source\repos\Bank_App\Bank_App\obj\Debug\Bank_App.GeneralControl.resources
+C:\Users\davom\source\repos\Bank_App\Bank_App\obj\Debug\Bank_App.DepositControl.resources
+C:\Users\davom\source\repos\Bank_App\Bank_App\bin\Debug\BankSQLserver.mdf
+C:\Users\davom\source\repos\Bank_App\Bank_App\bin\Debug\BankSQLserver_log.ldf
+C:\Users\davom\source\repos\Bank_App\Bank_App\obj\Debug\Bank_App.UserServices.resources
+C:\Users\davom\source\repos\Bank_App\Bank_App\obj\Debug\Bank_App.csprojAssemblyReference.cache
