@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Bank_App
 {
@@ -15,6 +16,7 @@ namespace Bank_App
         public GeneralControl()
         {
             InitializeComponent();
+            slider.Enabled = true;
         }
 
         private int imgIndex = 1;
@@ -24,8 +26,15 @@ namespace Bank_App
             {
                 imgIndex = 1;
             }
-            slideIMG.ImageLocation = $@"C:\Users\davom\source\repos\Bank_App\Bank_App\bin\Debug\SlideImages\{imgIndex}.jpg";
-            imgIndex++;
+            var fileInfo = new FileInfo($@".\SlideImages\{imgIndex}.jpg");
+            if (fileInfo.Exists)
+            {
+                slideIMG.ImageLocation = fileInfo.DirectoryName + @"\" + fileInfo.Name;
+                imgIndex++;
+            }
+            else
+                slider.Enabled = false;
+           
         }
 
         private void slider_Tick(object sender, EventArgs e)
