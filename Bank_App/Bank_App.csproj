@@ -102,51 +102,52 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DepositControl.cs">
+    <Compile Include="User Current Accaunt\User.cs" />
+    <Compile Include="UserControls\DepositControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DepositControl.Designer.cs">
+    <Compile Include="UserControls\DepositControl.Designer.cs">
       <DependentUpon>DepositControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="ElipsButton.cs">
+    <Compile Include="UserControls\ElipsButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="General.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="General.Designer.cs">
+      <DependentUpon>General.cs</DependentUpon>
     </Compile>
-    <Compile Include="GeneralControl.cs">
+    <Compile Include="UserControls\GeneralControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GeneralControl.Designer.cs">
+    <Compile Include="UserControls\GeneralControl.Designer.cs">
       <DependentUpon>GeneralControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="LogRegister.cs">
+    <Compile Include="UserControls\LogRegister.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="LogRegister.Designer.cs">
+    <Compile Include="UserControls\LogRegister.Designer.cs">
       <DependentUpon>LogRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserServices.cs">
+    <Compile Include="UserControls\UserServices.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserServices.Designer.cs">
+    <Compile Include="UserControls\UserServices.Designer.cs">
       <DependentUpon>UserServices.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="DepositControl.resx">
+    <EmbeddedResource Include="UserControls\DepositControl.resx">
       <DependentUpon>DepositControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="General.resx">
+      <DependentUpon>General.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GeneralControl.resx">
+    <EmbeddedResource Include="UserControls\GeneralControl.resx">
       <DependentUpon>GeneralControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LogRegister.resx">
+    <EmbeddedResource Include="UserControls\LogRegister.resx">
       <DependentUpon>LogRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -158,7 +159,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UserServices.resx">
+    <EmbeddedResource Include="UserControls\UserServices.resx">
       <DependentUpon>UserServices.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
