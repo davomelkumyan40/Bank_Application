@@ -30,8 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(General));
             this.generalPanel = new System.Windows.Forms.Panel();
+            this.elipsButton2 = new Bank_App.ElipsButton();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.elipsButton1 = new Bank_App.ElipsButton();
+            this.menuBar = new System.Windows.Forms.Panel();
             this.pointerPanel = new System.Windows.Forms.Panel();
             this.helpButton = new System.Windows.Forms.Button();
             this.depositButton = new System.Windows.Forms.Button();
@@ -40,15 +42,13 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.generalControl1 = new Bank_App.GeneralControl();
             this.userServices1 = new Bank_App.UserServices();
             this.logRegister1 = new Bank_App.LogRegister();
             this.depositControl1 = new Bank_App.DepositControl();
-            this.elipsButton2 = new Bank_App.ElipsButton();
-            this.elipsButton1 = new Bank_App.ElipsButton();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.generalPanel.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.menuBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -69,6 +69,24 @@
             this.generalPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.generalPanel_MouseMove);
             this.generalPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.generalPanel_MouseUp);
             // 
+            // elipsButton2
+            // 
+            this.elipsButton2.BackColor = System.Drawing.Color.White;
+            this.elipsButton2.FlatAppearance.BorderSize = 0;
+            this.elipsButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.elipsButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.elipsButton2.ForeColor = System.Drawing.Color.DimGray;
+            this.elipsButton2.Image = ((System.Drawing.Image)(resources.GetObject("elipsButton2.Image")));
+            this.elipsButton2.Location = new System.Drawing.Point(1014, 35);
+            this.elipsButton2.Name = "elipsButton2";
+            this.elipsButton2.Size = new System.Drawing.Size(103, 94);
+            this.elipsButton2.TabIndex = 10;
+            this.elipsButton2.Text = "Exit";
+            this.elipsButton2.UseVisualStyleBackColor = false;
+            this.elipsButton2.Click += new System.EventHandler(this.close_Click);
+            this.elipsButton2.MouseEnter += new System.EventHandler(this.elipsButton1_MouseEnter);
+            this.elipsButton2.MouseLeave += new System.EventHandler(this.elipsButton1_MouseLeave);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -80,18 +98,36 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Some Banek UI";
             // 
-            // panel3
+            // elipsButton1
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.panel3.Controls.Add(this.pointerPanel);
-            this.panel3.Controls.Add(this.helpButton);
-            this.panel3.Controls.Add(this.depositButton);
-            this.panel3.Controls.Add(this.servicesButton);
-            this.panel3.Controls.Add(this.generalButton);
-            this.panel3.Location = new System.Drawing.Point(-5, 175);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(291, 541);
-            this.panel3.TabIndex = 3;
+            this.elipsButton1.BackColor = System.Drawing.Color.White;
+            this.elipsButton1.FlatAppearance.BorderSize = 0;
+            this.elipsButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.elipsButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.elipsButton1.ForeColor = System.Drawing.Color.DimGray;
+            this.elipsButton1.Image = ((System.Drawing.Image)(resources.GetObject("elipsButton1.Image")));
+            this.elipsButton1.Location = new System.Drawing.Point(885, 35);
+            this.elipsButton1.Name = "elipsButton1";
+            this.elipsButton1.Size = new System.Drawing.Size(103, 94);
+            this.elipsButton1.TabIndex = 9;
+            this.elipsButton1.Text = "Login";
+            this.elipsButton1.UseVisualStyleBackColor = false;
+            this.elipsButton1.Click += new System.EventHandler(this.logButton_Click);
+            this.elipsButton1.MouseEnter += new System.EventHandler(this.elipsButton1_MouseEnter);
+            this.elipsButton1.MouseLeave += new System.EventHandler(this.elipsButton1_MouseLeave);
+            // 
+            // menuBar
+            // 
+            this.menuBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.menuBar.Controls.Add(this.pointerPanel);
+            this.menuBar.Controls.Add(this.helpButton);
+            this.menuBar.Controls.Add(this.depositButton);
+            this.menuBar.Controls.Add(this.servicesButton);
+            this.menuBar.Controls.Add(this.generalButton);
+            this.menuBar.Location = new System.Drawing.Point(-5, 175);
+            this.menuBar.Name = "menuBar";
+            this.menuBar.Size = new System.Drawing.Size(291, 541);
+            this.menuBar.TabIndex = 3;
             // 
             // pointerPanel
             // 
@@ -220,14 +256,6 @@
             this.panel1.Size = new System.Drawing.Size(1140, 480);
             this.panel1.TabIndex = 7;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.panel2.Location = new System.Drawing.Point(295, 703);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1124, 13);
-            this.panel2.TabIndex = 8;
-            // 
             // generalControl1
             // 
             this.generalControl1.Location = new System.Drawing.Point(3, 3);
@@ -252,46 +280,19 @@
             // 
             // depositControl1
             // 
+            this.depositControl1.BackColor = System.Drawing.Color.Silver;
             this.depositControl1.Location = new System.Drawing.Point(3, 0);
             this.depositControl1.Name = "depositControl1";
             this.depositControl1.Size = new System.Drawing.Size(1124, 472);
             this.depositControl1.TabIndex = 0;
             // 
-            // elipsButton2
+            // panel2
             // 
-            this.elipsButton2.BackColor = System.Drawing.Color.White;
-            this.elipsButton2.FlatAppearance.BorderSize = 0;
-            this.elipsButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.elipsButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.elipsButton2.ForeColor = System.Drawing.Color.DimGray;
-            this.elipsButton2.Image = ((System.Drawing.Image)(resources.GetObject("elipsButton2.Image")));
-            this.elipsButton2.Location = new System.Drawing.Point(1014, 35);
-            this.elipsButton2.Name = "elipsButton2";
-            this.elipsButton2.Size = new System.Drawing.Size(103, 94);
-            this.elipsButton2.TabIndex = 10;
-            this.elipsButton2.Text = "Exit";
-            this.elipsButton2.UseVisualStyleBackColor = false;
-            this.elipsButton2.Click += new System.EventHandler(this.close_Click);
-            this.elipsButton2.MouseEnter += new System.EventHandler(this.elipsButton1_MouseEnter);
-            this.elipsButton2.MouseLeave += new System.EventHandler(this.elipsButton1_MouseLeave);
-            // 
-            // elipsButton1
-            // 
-            this.elipsButton1.BackColor = System.Drawing.Color.White;
-            this.elipsButton1.FlatAppearance.BorderSize = 0;
-            this.elipsButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.elipsButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.elipsButton1.ForeColor = System.Drawing.Color.DimGray;
-            this.elipsButton1.Image = ((System.Drawing.Image)(resources.GetObject("elipsButton1.Image")));
-            this.elipsButton1.Location = new System.Drawing.Point(885, 35);
-            this.elipsButton1.Name = "elipsButton1";
-            this.elipsButton1.Size = new System.Drawing.Size(103, 94);
-            this.elipsButton1.TabIndex = 9;
-            this.elipsButton1.Text = "Login";
-            this.elipsButton1.UseVisualStyleBackColor = false;
-            this.elipsButton1.Click += new System.EventHandler(this.logButton_Click);
-            this.elipsButton1.MouseEnter += new System.EventHandler(this.elipsButton1_MouseEnter);
-            this.elipsButton1.MouseLeave += new System.EventHandler(this.elipsButton1_MouseLeave);
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panel2.Location = new System.Drawing.Point(295, 703);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1124, 13);
+            this.panel2.TabIndex = 8;
             // 
             // General
             // 
@@ -302,7 +303,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.menuBar);
             this.Controls.Add(this.generalPanel);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -311,7 +312,7 @@
             this.Text = "BankAccaunt";
             this.generalPanel.ResumeLayout(false);
             this.generalPanel.PerformLayout();
-            this.panel3.ResumeLayout(false);
+            this.menuBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -323,7 +324,7 @@
 
         private System.Windows.Forms.Panel generalPanel;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel menuBar;
         private System.Windows.Forms.Button generalButton;
         private System.Windows.Forms.Button helpButton;
         private System.Windows.Forms.Button depositButton;

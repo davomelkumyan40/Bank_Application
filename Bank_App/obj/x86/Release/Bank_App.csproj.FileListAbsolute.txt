@@ -13,3 +13,4 @@ C:\Users\davom\source\repos\Bank_App\Bank_App\obj\x86\Release\Bank_App.csproj.Ge
 C:\Users\davom\source\repos\Bank_App\Bank_App\obj\x86\Release\Bank_App.csproj.CoreCompileInputs.cache
 C:\Users\davom\source\repos\Bank_App\Bank_App\obj\x86\Release\Bank_App.exe
 C:\Users\davom\source\repos\Bank_App\Bank_App\obj\x86\Release\Bank_App.pdb
+C:\Users\davom\source\repos\Bank_App\Bank_App\obj\x86\Release\Bank_App.csprojAssemblyReference.cache

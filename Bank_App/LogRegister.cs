@@ -38,6 +38,11 @@ namespace Bank_App
                 LogedIn = true;
                 MessageBox.Show($"You Loged In {userName}");
             }
+            else
+            {
+                MessageBox.Show("Wrong Login or Password");
+                logPass.Text = "";
+            }
         }
 
 

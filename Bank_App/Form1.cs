@@ -20,7 +20,8 @@ namespace Bank_App
 
         private void close_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Dispose();
+            //Application.Exit();
         }
 
 
@@ -51,8 +52,13 @@ namespace Bank_App
             mouseDown = false;
         }
 
+        private string text = null;
         private void buttons_MouseEnter(object sender, EventArgs e)
         {
+            text = ((Button)sender).Text;
+            System.Threading.Thread.Sleep(100);
+            ((Button)sender).ImageAlign = ContentAlignment.MiddleCenter;
+            ((Button)sender).Text = "";
             pointerPanel.Visible = true;
             pointerPanel.Height = ((Button)sender).Height;
             pointerPanel.Top = ((Button)sender).Top;
@@ -61,6 +67,8 @@ namespace Bank_App
 
         private void buttons_MouseLeave(object sender, EventArgs e)
         {
+            ((Button)sender).ImageAlign = ContentAlignment.MiddleLeft;
+            ((Button)sender).Text = text;
             pointerPanel.Visible = false;
             pointerPanel.Height = ((Button)sender).Height;
             pointerPanel.Top = ((Button)sender).Top;
