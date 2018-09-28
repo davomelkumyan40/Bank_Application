@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 using Bank_App.User_Current_Accaunt;
 
 namespace Bank_App
@@ -61,7 +62,8 @@ namespace Bank_App
         private int id = 0;
         private bool CheckPass()
         {
-            string strConnection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\davom\source\repos\Bank_App\Bank_App\BankSQLserver.mdf;Integrated Security=True";
+            FileInfo sqlPath = new FileInfo(@".\BankSQLserver.mdf");
+            string strConnection = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={sqlPath.FullName};Integrated Security=True";
             string query = "SELECT [Password] FROM [BankAccaunt]";
             using (SqlConnection connection = new SqlConnection(strConnection))
             {
@@ -89,7 +91,8 @@ namespace Bank_App
 
         private bool CheckLog(out string name, out int id)
         {
-            string strConnection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\davom\source\repos\Bank_App\Bank_App\BankSQLserver.mdf;Integrated Security=True";
+            FileInfo sqlPath = new FileInfo(@".\BankSQLserver.mdf");
+            string strConnection = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={sqlPath.FullName};Integrated Security=True";
             string query = $@"SELECT [Id], [Login], [UserName] FROM [BankAccaunt]";
             using (SqlConnection connection = new SqlConnection(strConnection))
             {
@@ -124,7 +127,8 @@ namespace Bank_App
             if (!string.IsNullOrEmpty(regLog.Text) && !string.IsNullOrEmpty(regPass.Text) && regPassRepeat.Text == regPass.Text && !string.IsNullOrEmpty(regName.Text) &&
                !string.IsNullOrEmpty(regSurName.Text) && !string.IsNullOrEmpty(regEmail.Text) && bankChecker.Text != "Banks")
             {
-                string strConnection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\davom\source\repos\Bank_App\Bank_App\BankSQLserver.mdf;Integrated Security=True";
+                FileInfo sqlPath = new FileInfo(@".\BankSQLserver.mdf");
+                string strConnection = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={sqlPath.FullName};Integrated Security=True";
                 string query = $@"INSERT INTO BankAccaunt VALUES('{regName.Text}', '{regSurName.Text}', '{regEmail.Text}' ,{0} , {bankChecker.SelectedIndex + 1}, NULL, NULL, NULL, '{regLog.Text}', '{regPass.Text}')";
                 using (SqlConnection connection = new SqlConnection(strConnection))
                 {
@@ -155,8 +159,9 @@ namespace Bank_App
 
         private void FillBankSql()
         {
-            string strconnect = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\davom\source\repos\Bank_App\Bank_App\BankSQLserver.mdf;Integrated Security=True";
-            using (SqlConnection connection = new SqlConnection(strconnect))
+            FileInfo sqlPath = new FileInfo(@".\BankSQLserver.mdf");
+            string strConnection = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={sqlPath.FullName};Integrated Security=True";
+            using (SqlConnection connection = new SqlConnection(strConnection))
             {
                 string query = @"SELECT Name FROM [BankList]";
                 SqlCommand command = new SqlCommand(query, connection);

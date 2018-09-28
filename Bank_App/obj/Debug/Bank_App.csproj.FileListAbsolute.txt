@@ -13,4 +13,3 @@ C:\Users\davom\source\repos\Bank_App\Bank_App\obj\Debug\Bank_App.DepositControl.
 C:\Users\davom\source\repos\Bank_App\Bank_App\bin\Debug\BankSQLserver.mdf
 C:\Users\davom\source\repos\Bank_App\Bank_App\bin\Debug\BankSQLserver_log.ldf
 C:\Users\davom\source\repos\Bank_App\Bank_App\obj\Debug\Bank_App.UserServices.resources
-C:\Users\davom\source\repos\Bank_App\Bank_App\obj\Debug\Bank_App.csprojAssemblyReference.cache

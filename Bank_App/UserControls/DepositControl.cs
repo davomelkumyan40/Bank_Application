@@ -8,8 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using System.Data;
 using Bank_App.User_Current_Accaunt;
+using System.IO;
 
 namespace Bank_App
 {
@@ -23,7 +23,8 @@ namespace Bank_App
 
         private void FillFromSQLToComboBox()
         {
-            string strconnect = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\davom\source\repos\Bank_App\Bank_App\BankSQLserver.mdf;Integrated Security=True";
+            FileInfo file = new FileInfo(@".\BankSQLserver.mdf");
+            string strconnect = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={file.FullName};Integrated Security=True";
             using (SqlConnection connection = new SqlConnection(strconnect))
             {
                 string query = @"SELECT Name FROM [BankList]";
@@ -59,7 +60,7 @@ namespace Bank_App
                     while (reader.Read())
                     {
                         string name = reader.GetString(0);
-                        string percent = " - " + reader.GetByte(1) + " %";
+                        string percent = " - " + reader.GetInt32(1) + " %";
                         depositChecker.Items.Add(name + percent);
                     }
                 }
@@ -87,11 +88,15 @@ namespace Bank_App
         private void moneyCount_Click(object sender, EventArgs e)
         {
             ((TextBox)sender).Text = "";
+            ((TextBox)sender).ForeColor = Color.Black;
+            this.Refresh();
         }
 
         private void checker_Click(object sender, EventArgs e)
         {
             ((ComboBox)sender).Text = "";
+            ((ComboBox)sender).ForeColor = Color.Black;
+            this.Refresh();
         }
 
         private void depositCheck_Click(object sender, EventArgs e)

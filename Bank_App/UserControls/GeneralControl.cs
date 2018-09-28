@@ -29,7 +29,7 @@ namespace Bank_App
             var fileInfo = new FileInfo($@".\SlideImages\{imgIndex}.jpg");
             if (fileInfo.Exists)
             {
-                slideIMG.ImageLocation = fileInfo.DirectoryName + @"\" + fileInfo.Name;
+                slideIMG.ImageLocation = fileInfo.FullName;
                 imgIndex++;
             }
             else
