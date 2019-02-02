@@ -185,22 +185,32 @@ namespace Bank_App
             }
         }
 
-        private bool flagFirst = false;
-        private byte tag = 0;
+
+        public string saveString = null;
+        public byte prevTag = 0;
+        public RichTextBox prevLine = null;
+        public byte tag = 0;
+        //TODO PlaceHolder Bug Fix
         private void _Click_PlaceHolder(object sender, EventArgs e)
         {
-            if (!flagFirst && sender is RichTextBox RichBoxSender && tag != Convert.ToByte(RichBoxSender.Tag))
+            if (sender is RichTextBox && tag != Convert.ToByte(((RichTextBox)sender).Tag))
             {
-                RichBoxSender.Text = "";
-                RichBoxSender.ForeColor = Color.Black;
-                flagFirst = true;
-                tag = Convert.ToByte(RichBoxSender.Tag);
+                tag = Convert.ToByte(((RichTextBox)sender).Tag);
+                if (tag != prevTag && prevTag != 0)
+                {
+                    prevLine.ForeColor = Color.Gray;
+                    prevLine.Text = saveString;
+                }
+                prevTag = tag;
+                saveString = ((RichTextBox)sender).Text;
+                prevLine = ((RichTextBox)sender);
+                ((RichTextBox)sender).Text = "";
+                ((RichTextBox)sender).ForeColor = Color.Black;
             }
-            if (sender is ComboBox && !flagFirst)
+            if (sender is ComboBox)
             {
                 ((ComboBox)sender).Text = "";
                 ((ComboBox)sender).ForeColor = Color.Black;
-                flagFirst = true;
             }
         }
     }

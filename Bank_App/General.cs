@@ -12,7 +12,6 @@ namespace Bank_App
 {
     public partial class General : Form
     {
-        private int a;
         public General()
         {
             InitializeComponent();
